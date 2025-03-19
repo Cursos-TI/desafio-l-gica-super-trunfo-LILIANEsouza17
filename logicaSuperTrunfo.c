@@ -146,12 +146,8 @@ int main() {
     
             
      //FUNÇÃO PARA CALCULAR DENSIDADE POPULACIONAL E PIB PER CAPITA
-    void calcular_atributos(CARTA*carta){
-        carta->densidade_populacional=carta->populacao/carta->area;
-        carta->PIB_per_capita=carta->PIB/carta->populacao;
     }
-    Carta carta1,carta2;
-    int escolha;
+    
     //DADOS DA PRIMEIRA CARTA
     printf("DIGITE O NOME DO PRIMEIRO ESTADO: ");
     // Comparação de Cartas:
