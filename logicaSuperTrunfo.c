@@ -76,7 +76,7 @@ int main() {
     }
     
     //DADOS DA PRIMEIRA CARTA
-    printf("DIGITE O NOME DO PRIMEIRO ESTADO: ");
+    
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
