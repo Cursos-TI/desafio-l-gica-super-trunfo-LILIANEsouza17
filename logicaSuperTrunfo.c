@@ -103,8 +103,8 @@ if (atributo[0]=='p1'&&atributo[1]=='p2'){  // populacao
     if(valor1>valor2) vencedor = 1;
     else vencedor = 2;
 } else if(atributo[0]=='d') {  // densidade
-    valor1 = densidade1;
-    valor2 = densidade2;
+    valor1 = densidade_1;
+    valor2 = densidade_2;
     if(valor1<valor2) vencedor = 1;
     else vencedor = 2;
 } else if(atributo[0]=='p'&&atributo[2]=='c') { // pib per capita
