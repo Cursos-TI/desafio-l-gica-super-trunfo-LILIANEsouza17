@@ -70,6 +70,8 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", pontos_turisticos2);
     printf("CARTA 2 CADASTRADA COM SUCESSO!\n");
     printf("-----------------------------------------------------------------\n");
+    RETURN 0;
+}   
 
 
 //DADOS DAS CARTAS
