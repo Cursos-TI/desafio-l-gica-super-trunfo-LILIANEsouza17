@@ -79,10 +79,10 @@ int populacao1 = 5000000, populacao2 = 8000000;
 float area1 = 4500.0, area2 = 9800.0;
 float pib1 = 6000000000.0, pib2 = 85000000000.0;
 // outros atributos
-float densidade_1 = populacao1/ area1;
+float densidade_1 = populacao1 / area1;
 float densidade_2 = populacao2/ area2;
-float pib_per_capita1 = pib1/ populacao1;
-float pib_per_capita2 = pib2/ populacao2;
+float pib_per_capita1 = pib1 / populacao1;
+float pib_per_capita2 = pib2 / populacao2;
 // escolha do atributo
 char atributo[] = "populacao";// pode escolher entre "populacao","area","pib","densidade","pib_per_capita"
 // variaveis usadas para a comparaçao
