@@ -72,6 +72,63 @@ int main() {
     printf("-----------------------------------------------------------------\n");
 
 
+//DADOS DAS CARTAS
+int populacao1 = 5000000, populacao2 = 8000000;
+float area1 = 4500.0, area2 = 9800.0;
+float pib1 = 6000000000.0, pib2 = 85000000000.0;
+// outros atributos
+float densidade_1 = populacao1/ area1;
+float densidade_2 = populacao2/ area2;
+float pib_per_capita1 = pib1/ populacao1;
+float pib_per_capita2 = pib2/ populacao2;
+// escolha do atributo
+char atributo[] = "populacao";// pode escolher entre "populacao","area","pib","densidade","pib_per_capita"
+// variaveis usadas para a comparaçao
+float valor1 = 0,valor2 = 0;
+int vencedor = 0;
+//usando if e if-else para comparar as cartas
+if (atributo[0]=='p1'&&atributo[1]=='p2'){  // populacao
+    valor1 = populacao1;
+    valor2 = populacao2;
+    if(valor1>valor2) vencedor = 1;
+    else vencedor = 2;
+} else if(atributo[0]=='a'){ // area 
+    valor1 = area1;
+    valor2 = area2;
+    if(valor1>valor2) vencedor = 1;
+    else vencedor = 2;
+} else if(atributo[0]=='p'&&atributo[2]=='b') { // pib
+    valor1 = pib1;
+    valor2 = pib2;
+    if(valor1>valor2) vencedor = 1;
+    else vencedor = 2;
+} else if(atributo[0]=='d') {  // densidade
+    valor1 = densidade1;
+    valor2 = densidade2;
+    if(valor1<valor2) vencedor = 1;
+    else vencedor = 2;
+} else if(atributo[0]=='p'&&atributo[2]=='c') { // pib per capita
+    valor1 = pib_per_capita1;
+    valor1 = pib_per_capita2;
+    if(valor1>valor2) vencedor = 1;
+    else vencedor = 2;
+}
+// exibiçao do resultado da comparaçao
+printf("ATRIBUTO UTILIZADO: %s\n", atributo);
+printf("CARTA 1: %.2f\n", valor1);
+printf("CARTA 2: %.2f\n", valor2);
+printf("CARTA VENCEDORA: CARTA %d\n", vencedor);
+printf("--------------------------------------------------------------------------\n");
+
+
+return 0;
+}
+
+
+
+
+
+
     return 0;
 }
 
