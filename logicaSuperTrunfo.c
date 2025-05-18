@@ -73,7 +73,9 @@ int main() {
     RETURN 0;
 }   
 
-
+#include<stdio.h>
+int main(){
+    
 //DADOS DAS CARTAS
 int populacao1 = 5000000, populacao2 = 8000000;
 float area1 = 4500.0, area2 = 9800.0;
