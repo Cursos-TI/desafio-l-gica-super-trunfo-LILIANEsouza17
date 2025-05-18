@@ -70,18 +70,66 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", pontos_turisticos2);
     printf("CARTA 2 CADASTRADA COM SUCESSO!\n");
     printf("-----------------------------------------------------------------\n");
-   
-    
-
-     
+ 
 
 
+char codigo_letra1, codigo_letra2,estado1, estado2;
+    int codigo_numero1, codigo_numero2, cidade1, cidade2;
+    int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
+    float area1, area2, pib1, pib2;
 
-// outros atributos
+    // outros atributos
 float densidade_1 = populacao1 / area1;
 float densidade_2 = populacao2/ area2;
 float pib_per_capita1 = pib1 / populacao1;
 float pib_per_capita2 = pib2 / populacao2;
+
+// entrada de dados da carta 1
+
+printf("DIGITE O CÓDIGO DA CARTA 1(LETRA A-H): \n");
+scanf(" %d",&codigo_letra1);
+printf("DIGITE O CÓDIGO DA CARTA 1(NÚMERO 1-4): \n");
+scanf(" %d", &codigo_numero1);
+printf("DIGITE O ESTADO(A-H): \n");
+scanf(" %c", &estado1);
+printf("DIGITE A CIDADE(1-4): \n");
+scanf(" %d", &cidade1);
+printf("DIGITE A POPULAÇÃO: \n");
+scanf(" %d", &populacao1);
+printf("DIGITE A ÁREA(EM KM²): \n");
+scanf(" %f", &area1);
+printf("DIGITE O PIB: \n");
+scanf(" %f", &pib1);
+printf("DIGITE OS PONTOS TURÍSTICOS: \n");
+scanf(" %d", &pontos_turisticos1);
+printf("DIGITE A DENSIDADE POPULACIONAL: \n");
+scanf(" %f", &densidade_1);
+printf("DIGITE O PIB PER CAPITA: \n");
+scanf(" %f", &pib_per_capita1);
+printf("----------------------------------------------------------------\n");
+//entrada de dados da carta 2
+printf("DIGITE O CÓDIGO DA CARTA 2(LETRA A-H): \n");
+scanf(" %d",&codigo_letra2);
+printf("DIGITE O CÓDIGO DA CARTA 2(NÚMERO 1-4): \n");
+scanf(" %d", &codigo_numero2);
+printf("DIGITE O ESTADO(A-H): \n");
+scanf(" %c", &estado2);
+printf("DIGITE A CIDADE(1-4): \n");
+scanf(" %d", &cidade2);
+printf("DIGITE A POPULAÇÃO: \n");
+scanf(" %d", &populacao2);
+printf("DIGITE A ÁREA(EM KM²): \n");
+scanf(" %f", &area2);
+printf("DIGITE O PIB: \n");
+scanf(" %f", &pib2);
+printf("DIGITE OS PONTOS TURÍSTICOS: \n");
+scanf(" %d", &pontos_turisticos2);
+printf("DIGITE A DENSIDADE POPULACIONAL: \n");
+scanf(" %f", &densidade_2);
+printf("DIGITE O PIB PER CAPITA: \n");
+scanf(" %f", &pib_per_capita2);
+printf("----------------------------------------------------------------\n");
+
 // escolha do atributo
 char atributo[] = "populacao";// pode escolher entre "populacao","area","pib","densidade","pib_per_capita"
 // variaveis usadas para a comparaçao
