@@ -4,10 +4,18 @@ int main() {
     printf("DESAFIO SUPER TRUNFO - PAÍSES\n");
     printf("DESENVOLVENDO A LÓGICA DO JOGO!\n");
 
- char codigo_letra1, codigo_letra2,estado1, estado2;
+    char codigo_letra1, codigo_letra2,estado1, estado2;
     int codigo_numero1, codigo_numero2, cidade1, cidade2;
     int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
     float area1, area2, pib1, pib2;
+    // outros atributos
+    float densidade_1 = populacao1 / area1;
+    float densidade_2 = populacao2/ area2;
+    float pib_per_capita1 = pib1 / populacao1;
+    float pib_per_capita2 = pib2 / populacao2;
+
+
+
     // cadastro da carta 1
     printf("CADASTRO DA CARTA 1\n");
     printf("CÓDIGO DA CARTA 1- LETRA(A-H): ");
@@ -26,8 +34,12 @@ int main() {
     scanf(" %f", &pib1);
     printf("NÚMERO DE PONTOS TURÍSTICOS: ");
     scanf(" %d", &pontos_turisticos1);
+    printf("DIGITE A DENSIDADE POPULACIONAL: \n");
+    scanf(" %f", &densidade_1);
+    printf("DIGITE O PIB PER CAPITA: \n");
+    scanf(" %f", &pib_per_capita1);
     printf("\n");
-
+  
     // CADASTRO DA CARTA 2
     printf("CADASTRO DA CARTA 2\n");
     printf("CÓDIGO DA CARTA 2-LETRA(A-H): ");
@@ -46,8 +58,12 @@ int main() {
     scanf(" %f", &pib2);
     printf("NÚMERO DE PONTOS TURÍSTICOS: ");
     scanf(" %d", &pontos_turisticos2);
+    printf("DIGITE A DENSIDADE POPULACIONAL: \n");
+    scanf(" %f", &densidade_2);
+    printf("DIGITE O PIB PER CAPITA: \n");
+    scanf(" %f", &pib_per_capita2);
     printf("\n");
-
+    
     // EXIBIR AS CARTAS CADASTRADAS
     printf("CARTAS CADASTRADAS:\n");
     printf("CARTA 1\n");
@@ -72,113 +88,66 @@ int main() {
     printf("-----------------------------------------------------------------\n");
  
 
+// COMPARAÇÃO DAS CARTAS 1 E 2
+//escolha dos atributos
+     char atributo []= "populacao";// as opções do atributo:"populacao","area","pib","densidade"ou "pib_per_capita" 
+//variaveis para comparaçao
+     float valor1=0,valor2=0;int vencedor=0;
 
-char codigo_letra1, codigo_letra2,estado1, estado2;
-    int codigo_numero1, codigo_numero2, cidade1, cidade2;
-    int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
-    float area1, area2, pib1, pib2;
+     if(atributo[0]=='p1'&&atributo[1]=='p2') {
+        valor1=populacao1;
+        valor2=populacao2;
+        if(valor1 > valor2)vencedor =1;
+        else vencedor=2;
+     } else if(atributo[0]=='a') {
+        valor1=area1;
+        valor2=area2;
+        if(valor1 >valor2) vencedor=1;
+        else vencedor=2;
+     }  else if(atributo[0]=='pi1'&&atributo[2]=='pi2'){
+        valor1=pib1;
+        valor2=pib2;
+        if(valor1 >valor2) vencedor=1;
+        else vencedor=2;
+     }  else if(atributo[0]=='d'){
+        valor1=densidade_1;
+        valor2=densidade_2;
+        if(valor1 < valor2)vencedor=1;
+        else vencedor=2;
+     }else if(atributo[0]=='pc1'&&atributo[2]=='pc2') {
+        valor1=pib_per_capita1;
+        valor2=pib_per_capita2;
+        if(valor1 > valor2) vencedor=1;
+        else vencedor=2;
+     }
+     // exibição do resultado da comparação das cartas
+     printf("ATRIBUTO ESCOLHIDO: %s\n", atributo);
+     printf("CARTA 1: %.2f\n", valor1);
+     printf("CARTA 2: %.2f\n",valor2);
+     printf("CARTA VENCEDORA: CARTA %d\n",vencedor);
+     printf("-------------------------------------------------------------------\n");
 
-    // outros atributos
-float densidade_1 = populacao1 / area1;
-float densidade_2 = populacao2/ area2;
-float pib_per_capita1 = pib1 / populacao1;
-float pib_per_capita2 = pib2 / populacao2;
+     return 0;
+    }
 
-// entrada de dados da carta 1
+     
+        
+     
+    
+      
 
-printf("DIGITE O CÓDIGO DA CARTA 1(LETRA A-H): \n");
-scanf(" %d",&codigo_letra1);
-printf("DIGITE O CÓDIGO DA CARTA 1(NÚMERO 1-4): \n");
-scanf(" %d", &codigo_numero1);
-printf("DIGITE O ESTADO(A-H): \n");
-scanf(" %c", &estado1);
-printf("DIGITE A CIDADE(1-4): \n");
-scanf(" %d", &cidade1);
-printf("DIGITE A POPULAÇÃO: \n");
-scanf(" %d", &populacao1);
-printf("DIGITE A ÁREA(EM KM²): \n");
-scanf(" %f", &area1);
-printf("DIGITE O PIB: \n");
-scanf(" %f", &pib1);
-printf("DIGITE OS PONTOS TURÍSTICOS: \n");
-scanf(" %d", &pontos_turisticos1);
-printf("DIGITE A DENSIDADE POPULACIONAL: \n");
-scanf(" %f", &densidade_1);
-printf("DIGITE O PIB PER CAPITA: \n");
-scanf(" %f", &pib_per_capita1);
-printf("----------------------------------------------------------------\n");
-//entrada de dados da carta 2
-printf("DIGITE O CÓDIGO DA CARTA 2(LETRA A-H): \n");
-scanf(" %d",&codigo_letra2);
-printf("DIGITE O CÓDIGO DA CARTA 2(NÚMERO 1-4): \n");
-scanf(" %d", &codigo_numero2);
-printf("DIGITE O ESTADO(A-H): \n");
-scanf(" %c", &estado2);
-printf("DIGITE A CIDADE(1-4): \n");
-scanf(" %d", &cidade2);
-printf("DIGITE A POPULAÇÃO: \n");
-scanf(" %d", &populacao2);
-printf("DIGITE A ÁREA(EM KM²): \n");
-scanf(" %f", &area2);
-printf("DIGITE O PIB: \n");
-scanf(" %f", &pib2);
-printf("DIGITE OS PONTOS TURÍSTICOS: \n");
-scanf(" %d", &pontos_turisticos2);
-printf("DIGITE A DENSIDADE POPULACIONAL: \n");
-scanf(" %f", &densidade_2);
-printf("DIGITE O PIB PER CAPITA: \n");
-scanf(" %f", &pib_per_capita2);
-printf("----------------------------------------------------------------\n");
 
-// escolha do atributo
-char atributo[] = "populacao";// pode escolher entre "populacao","area","pib","densidade","pib_per_capita"
-// variaveis usadas para a comparaçao
-float valor1 = 0,valor2 = 0;
-int vencedor = 0;
-//usando if e if-else para comparar as cartas
-if (atributo[0]=='p1'&&atributo[1]=='p2'){  // populacao
-    valor1 = populacao1;
-    valor2 = populacao2;
-    if(valor1>valor2) vencedor = 1;
-    else vencedor = 2;
-} else if(atributo[0]=='a'){ // area 
-    valor1 = area1;
-    valor2 = area2;
-    if(valor1>valor2) vencedor = 1;
-    else vencedor = 2;
-} else if(atributo[0]=='p'&&atributo[2]=='b') { // pib
-    valor1 = pib1;
-    valor2 = pib2;
-    if(valor1>valor2) vencedor = 1;
-    else vencedor = 2;
-} else if(atributo[0]=='d') {  // densidade
-    valor1 = densidade_1;
-    valor2 = densidade_2;
-    if(valor1<valor2) vencedor = 1;
-    else vencedor = 2;
-} else if(atributo[0]=='p'&&atributo[2]=='c') { // pib per capita
-    valor1 = pib_per_capita1;
-    valor1 = pib_per_capita2;
-    if(valor1>valor2) vencedor = 1;
-    else vencedor = 2;
-}
-// exibiçao do resultado da comparaçao
-printf("ATRIBUTO UTILIZADO: %s\n", atributo);
-printf("CARTA 1: %.2f\n", valor1);
-printf("CARTA 2: %.2f\n", valor2);
-printf("CARTA VENCEDORA: CARTA %d\n", vencedor);
-printf("--------------------------------------------------------------------------\n");
+
+
+    
 
 
 
 
 
 
+   
 
-
-
-    return 0;
-}
 
 
 // Desafio Super Trunfo - Países
@@ -257,6 +226,7 @@ printf("------------------------------------------------------------------------
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
-    return 0;
+    
+    
     }
   
