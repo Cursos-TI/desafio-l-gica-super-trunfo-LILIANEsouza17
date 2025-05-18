@@ -90,7 +90,7 @@ int main() {
 
 // COMPARAÇÃO DAS CARTAS 1 E 2
 //escolha dos atributos
-     char atributo [];// as opções do atributo podem ser escolhidas entre:"populacao","area","pib","densidade"ou "pib_per_capita" 
+     char atributo []= "densidade";// as opções do atributo podem ser escolhidas entre:"populacao","area","pib","densidade"ou "pib_per_capita" 
 
      //variaveis para comparaçao
      float valor1,valor2;
