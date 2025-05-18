@@ -70,16 +70,13 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", pontos_turisticos2);
     printf("CARTA 2 CADASTRADA COM SUCESSO!\n");
     printf("-----------------------------------------------------------------\n");
-    RETURN 0;
-}   
-
-#include<stdio.h>
-int main(){
+   
     
-//DADOS DAS CARTAS
-int populacao1 = 5000000, populacao2 = 8000000;
-float area1 = 4500.0, area2 = 9800.0;
-float pib1 = 6000000000.0, pib2 = 85000000000.0;
+
+     
+
+
+
 // outros atributos
 float densidade_1 = populacao1 / area1;
 float densidade_2 = populacao2/ area2;
