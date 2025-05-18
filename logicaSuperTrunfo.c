@@ -90,9 +90,11 @@ int main() {
 
 // COMPARAÇÃO DAS CARTAS 1 E 2
 //escolha dos atributos
-     char atributo []= "populacao";// as opções do atributo:"populacao","area","pib","densidade"ou "pib_per_capita" 
-//variaveis para comparaçao
-     float valor1=0,valor2=0;int vencedor=0;
+     char atributo [];// as opções do atributo podem ser escolhidas entre:"populacao","area","pib","densidade"ou "pib_per_capita" 
+
+     //variaveis para comparaçao
+     float valor1,valor2;
+     int vencedor;
 
      if(atributo[0]=='p1'&&atributo[1]=='p2') {
         valor1=populacao1;
@@ -204,7 +206,7 @@ int main() {
     
             
      //FUNÇÃO PARA CALCULAR DENSIDADE POPULACIONAL E PIB PER CAPITA
-    }
+    
     
     //DADOS DA PRIMEIRA CARTA
     
@@ -228,5 +230,5 @@ int main() {
 
     
     
-    }
+    
   
